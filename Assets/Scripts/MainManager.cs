@@ -38,7 +38,7 @@ public class MainManager : MonoBehaviour
                 brick.onDestroyed.AddListener(AddPoint);
             }
         }
-
+        NameHolder.Instance.LoadBest();
         Best.text = "Best : " + NameHolder.Instance.PreName + " : " + NameHolder.Instance.PreScore;
     }
 
