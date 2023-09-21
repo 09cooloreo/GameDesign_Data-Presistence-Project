@@ -9,6 +9,13 @@ using UnityEngine.Windows;
 
 public class MainMenu : MonoBehaviour
 {
+    public Text Best;
+    private void Start()
+    {
+        NameHolder.Instance.LoadBest();
+        Best.text = "Best : " + NameHolder.Instance.PreName + " : " + NameHolder.Instance.PreScore;
+    }
+
     public void StartGame()
     {
         SceneManager.LoadScene(1);
